@@ -1,23 +1,34 @@
-import { Layout } from '@/components/dom/Layout'
-import '@/global.css'
+import { cn } from "@/lib/utils";
+import { MainNav } from "@/components/main-nav";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import "./globals.css";
+import { Metadata } from "next";
+import Head from "./head";
 
-export const metadata = {
-  title: 'Next.js + Three.js',
-  description: 'A minimal starter for Nextjs + React-three-fiber and Threejs.',
-}
+export const metadata: Metadata = {
+  title: "Crypto Pro",
+  description: "Découvre les listes des meilleures cryptos pour le Bull Run de 2024 pour faire X20 au minimum",
+};
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{ 
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang='en' className='antialiased'>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>
-        {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
-        <Layout>{children}</Layout>
+    <html lang="fr-FR">
+      <body className="min-h-screen w-screen overflow-x-hidden font-sans antialiased">
+        <header>
+          <Head />
+        </header>
+        <div className="relative flex min-h-screen flex-col">
+          <div className="flex items-center space-x-4 sm:justify-between sm:space-x-0">
+            <MainNav />
+          </div>
+          <div className="flex-1">{children}</div>
+          <TailwindIndicator />
+        </div>
       </body>
     </html>
-  )
+  );
 }

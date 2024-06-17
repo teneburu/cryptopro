@@ -1,82 +1,81 @@
-'use client'
+import Image from "next/image"
+import { buttonVariants } from "@/components/ui/button"
+import Link from "next/link"
+import  { AppGui1, AppVisu1, AppVisu2, RightArrow } from "@/components/icons"
+import VideoComponent from "@/components/video-component"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
-
-const Logo = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Logo), { ssr: false })
-const Dog = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Dog), { ssr: false })
-const Duck = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Duck), { ssr: false })
-const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
-  ssr: false,
-  loading: () => (
-    <div className='flex h-96 w-full flex-col items-center justify-center'>
-      <svg className='-ml-1 mr-3 h-5 w-5 animate-spin text-black' fill='none' viewBox='0 0 24 24'>
-        <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />
-        <path
-          className='opacity-75'
-          fill='currentColor'
-          d='M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
-        />
-      </svg>
-    </div>
-  ),
-})
-const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 
 export default function Page() {
   return (
-    <>
-      <div className='mx-auto flex w-full flex-col flex-wrap items-center md:flex-row  lg:w-4/5'>
-        {/* jumbo */}
-        <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-2/5 md:text-left'>
-          <p className='w-full uppercase'>Next + React Three Fiber</p>
-          <h1 className='my-4 text-5xl font-bold leading-tight'>Next 3D Starter</h1>
-          <p className='mb-8 text-2xl leading-normal'>A minimalist starter for React, React-three-fiber and Threejs.</p>
+    <div>
+      <Image src="/backgroundgradient.png" alt="placeholder" fill className=" object-cover object-top absolute pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
+      <section className="container p-4 py-8 md:p-16 xl:p-24 sm:h-[calc(40vh)] md:h-[calc(50vh)] xl:h-[calc(60vh)]">
+        <h1 className="text-7xl font-bold text-[#1E1E1E] mt-52">Investir les meilleures<br/> cryptomonnaies.</h1>
+        <p className="my-8 text-lg font-medium">Crypto Pro vous accompagne dans vos investissements en cryptomonnaie, <br/>et vous enseigne comment maximiser vos profits. Profitez de notre expertise <br/>pour fructifier votre capital et tirer parti des prochains bull runs.</p>
+        <Link href="/listes" className={buttonVariants({variant: "outline"})}>Programmer un appel <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+        <Link href="/listes" className={buttonVariants({variant: "nooutline"})}>Assister à un live <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+      </section>
+      <section className="container p-4 py-8 md:p-16 xl:p-24">
+        <div className="sm:h-[calc(60vh)] md:h-[calc(70vh)] xl:h-[calc(80vh)]">
+            <h1 className="text-4xl font-bold text-[#1E1E1E] mt-52">Démystifier le monde complexe <br/> des cryptomonnaies.</h1>
+            <div className="flex mb-16 relative w-full items-center">
+              <p className="my-8 text-lg font-medium">Nous fournissons à nos membres les outils nécessaires pour prendre <br/>des décisions éclairées, en rendant l'investissement plus facile et efficace.</p>
+              <div className="absolute right-0"><Link href="/formation" className={` ${buttonVariants({variant: "outline"})}`}>En savoir plus <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link></div>
+            </div>
+          <VideoComponent video_id="aZO9A4TWmds" className="rounded-3xl shadow-2xl"/>
         </div>
-
-        <div className='w-full text-center md:w-3/5'>
-          <View className='flex h-96 w-full flex-col items-center justify-center'>
-            <Suspense fallback={null}>
-              <Logo route='/blob' scale={0.6} position={[0, 0, 0]} />
-              <Common />
-            </Suspense>
-          </View>
+      </section>
+      <section className="container p-4 py-8 md:p-16 xl:p-24">
+        <div className="sm:h-[calc(60vh)] md:h-[calc(70vh)] xl:h-[calc(80vh)]">
+          <div className="grid grid-cols-2 grid-rows-7 justify-center pb-8 sm:gap-6 md:gap-8 xl:flex-nowrap">
+          <Card className="col-span-2 row-span-2 flex-row  py-12 place-items-center bg-orange-200/20">
+            <CardContent className="flex flex-col absolute size-44 right-16">
+              <Image src='/handshake.png' alt='handshake' fill/>
+            </CardContent>
+              <CardTitle className="text-3xl text-stone-800 font-semibold">Rejoignez un cercle très fermé.</CardTitle>
+            <CardFooter className="text-stone-800">
+              Nous mettons en valeur les relations humaines, pour ne pas vous laisser seul face au marché. <br/> C'est pourquoi nous ne donnons accès à notre service que sur invitation.
+            </CardFooter>
+            <Link href="/listes" className={`ml-8 ${buttonVariants({variant: "outline"})}`}><RightArrow className="w-4 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+          </Card>
+          <Card className="row-span-2 flex-row py-4 place-items-center bg-red-200/20">
+            <CardContent className="absolute right-8 bottom-0">
+              <AppVisu1 className="size-64"/>
+            </CardContent>
+              <CardTitle className="text-xl pt-4 text-stone-800 font-semibold">Une application <br/>pour tout vos <br/>investissements</CardTitle>
+            <CardFooter className="text-stone-800">
+              Téléchargez notre application <br/>sur Android et iOS pour <br/>travailler depuis n&apos;importe où.
+            </CardFooter>
+          </Card>
+          <Card className="row-span-2 flex-row py-4 place-items-center bg-rose-200/20">
+            <CardContent className="absolute right-[-10px] bottom-0">
+              <AppVisu2 className="size-64"/>
+            </CardContent>
+              <CardTitle className="text-xl pt-4 text-stone-800 font-semibold">Profitez des listes crypto <br/>les plus performantes <br/>du marché</CardTitle>
+            <CardFooter className="text-stone-800">
+              Depuis 2020, nos investissements <br/>ont connu une croissance de 14 000 %.
+            </CardFooter>
+          </Card>
+          <Card className="col-span-2 row-span-3 flex-row py-12 place-items-center bg-night">
+            <CardContent className="absolute overflow-hidden -right-16 -bottom-52">
+              <AppGui1 className="size-[calc(55vh)]"/>
+            </CardContent>
+              <CardTitle className="text-3xl text-stone-100 font-semibold">Une interface intuitive pour tout centraliser</CardTitle>
+            <CardFooter className="text-lg tracking-wide text-stone-100">
+              Nous vous accompagnons tout au long de vos investissements, <br/>avec une formation adaptée à tout les niveaux de compétence. <br/>Notre mission est de fournir les outils, les ressources <br/>et le soutien nécessaires pour que chacun <br/>puisse atteindre ses objectifs financiers.
+            </CardFooter>
+            <Link href="/listes" className={`ml-8 absolute bottom-16 ${buttonVariants({variant: "white"})}`}><RightArrow className="w-4 text-stone-100 group-hover:text-stone-500 fill-current"/></Link>
+          </Card>
+          </div>
         </div>
-      </div>
-
-      <div className='mx-auto flex w-full flex-col flex-wrap items-center p-12 md:flex-row  lg:w-4/5'>
-        {/* first row */}
-        <div className='relative h-48 w-full py-6 sm:w-1/2 md:my-12 md:mb-40'>
-          <h2 className='mb-3 text-3xl font-bold leading-none text-gray-800'>Events are propagated</h2>
-          <p className='mb-8 text-gray-600'>Drag, scroll, pinch, and rotate the canvas to explore the 3D scene.</p>
-        </div>
-        <div className='relative my-12 h-48 w-full py-6 sm:w-1/2 md:mb-40'>
-          <View orbit className='relative h-full  sm:h-48 sm:w-full'>
-            <Suspense fallback={null}>
-              <Dog scale={2} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
-              <Common color={'lightpink'} />
-            </Suspense>
-          </View>
-        </div>
-        {/* second row */}
-        <div className='relative my-12 h-48 w-full py-6 sm:w-1/2 md:mb-40'>
-          <View orbit className='relative h-full animate-bounce sm:h-48 sm:w-full'>
-            <Suspense fallback={null}>
-              <Duck route='/blob' scale={2} position={[0, -1.6, 0]} />
-              <Common color={'lightblue'} />
-            </Suspense>
-          </View>
-        </div>
-        <div className='w-full p-6 sm:w-1/2'>
-          <h2 className='mb-3 text-3xl font-bold leading-none text-gray-800'>Dom and 3D are synchronized</h2>
-          <p className='mb-8 text-gray-600'>
-            3D Divs are renderer through the View component. It uses gl.scissor to cut the viewport into segments. You
-            tie a view to a tracking div which then controls the position and bounds of the viewport. This allows you to
-            have multiple views with a single, performant canvas. These views will follow their tracking elements,
-            scroll along, resize, etc.
-          </p>
-        </div>
-      </div>
-    </>
+      </section>
+    </div>
   )
 }
