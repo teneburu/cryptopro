@@ -12,8 +12,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Temoignage from "@/components/temoignage"
-import { Separator } from "@radix-ui/react-separator"
-
 
 export default function Page() {
   return (
