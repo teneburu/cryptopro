@@ -8,7 +8,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-2xl border-2 border-slate-500/10  text-card-foreground shadow-sm backdrop-blur-sm",
+      "md:grid md:grid-cols-2 sm:flex sm:flex-col relative rounded-2xl border-2 px-4 lg:px-8 pt-8 border-slate-500/10 shadow-sm backdrop-blur-sm",
       className
     )}
     {...props}
@@ -35,7 +35,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "whitespace-nowrap pb-4 mt-4 ml-8 font-semibold leading-none",
+      "xl:text-2xl text-xl font-semibold  pb-6",
       className
     )}
     {...props}
@@ -50,7 +50,7 @@ const CardDescription = React.forwardRef<
   <p
     ref={ref}
     className={cn(
-      "text-balance pb-4 text-lg font-medium leading-6 ",
+      "lg:text-lg sm:text-sm text-pretty pb-8 font-medium tracking-tight leading-tight",
       className
     )}
     {...props}
@@ -64,7 +64,7 @@ const CardContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(" flex", className)}
+    className={cn("", className)}
     {...props}
   />
 ));
@@ -77,7 +77,7 @@ const CardFooter = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "text-balance pb-4 mt-4 ml-8 mb-8 font-medium leading-6",
+      "",
       className
     )}
     {...props}
@@ -85,8 +85,34 @@ const CardFooter = React.forwardRef<
 ));
 CardFooter.displayName = "CardFooter";
 
+const Card2 = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      className
+    )}
+    {...props}
+  />
+))
+Card.displayName = "Card"
+
+const CardContent2 = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+))
+CardContent.displayName = "CardContent"
+
+
 export {
   Card,
+  Card2,
+  CardContent2,
   CardHeader,
   CardFooter,
   CardTitle,

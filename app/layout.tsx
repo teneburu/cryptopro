@@ -4,6 +4,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator";
 import "./globals.css";
 import { Metadata } from "next";
 import Head from "./head";
+import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Crypto Pro",

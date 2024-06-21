@@ -13,14 +13,13 @@ import { motion } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
 import { MenuButton } from "./ui/menubutton";
 import { useEffect, useState } from "react";
-import HorizontalLogo from "@/components/SvgHoriLogo";
-import { Instagram, Telegram } from "@/components/icons";
+import { Instagram, Telegram, CropHoriLogo, HoriLogo } from "@/components/icons";
 
 const DesktopNav = () => {
   return (
     <div className="hidden relative w-full px-24 space-x-12 items-center lg:flex backdrop-blur-md pt-12">
       <Link href="/" className="flex items-center space-x-3 pl-12">
-          <HorizontalLogo className="w-44 text-stone-900 fill-current" />
+          <HoriLogo className="w-44 text-stone-900 fill-current" />
       </Link>
       <NavigationMenu>
         <NavigationMenuList>
@@ -33,10 +32,10 @@ const DesktopNav = () => {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/formation" legacyBehavior passHref>
+            <Link href="/academie" legacyBehavior passHref>
               <NavigationMenuLink
                 className={`${navigationMenuTriggerStyle()} text-stone-900 text-lg font-bold`}>
-                Formation 
+                Académie 
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -62,32 +61,11 @@ const MobileNav = ({...props}) => {
   const [active, setActive] = useState(false);
   return (
     <div {...props}>
-      <div className="lg:hidden relative backdrop-blur-md flex justify-center z-10">
-        <Link href="/" className="py-2">
-          <HorizontalLogo className="w-32 overflow-visible text-stone-900 fill-current" />
+      <div className="lg:hidden fixed top-0 w-full backdrop-blur-sm flex justify-center z-10">
+        <Link href="/" className="pt-4">
+          <CropHoriLogo className="w-44 overflow-visible text-stone-900 fill-current" />
         </Link>
-        <div className="flex absolute pt-2 h-full right-12">
-          <MenuButton active={active} setActive={setActive} />
-        </div>
       </div>
-      <motion.div
-        className="lg:hidden fixed inset-x-0 flex content-center bg-background/70 backdrop-blur-md w-full"
-        initial={{ y: "-100%", opacity: 0 }}
-        animate={active ? { y: "0%", opacity: 1 } : { y: "-100%", opacity: 0 }}
-        transition={{ ease: "easeInOut", duration: 1.3, delay: 0.1 }}
-      >
-        <div
-          className="flex flex-col space-y-2 size-full justify-center items-center p-3 text-night/90 font-semibold text-lg"
-          onClick={() => setActive(false)}
-        >
-          <Separator className="w-1/2 mt-2 bg-stone-900" />
-          <Link href="/listes">Listes</Link>
-          <Link href="/formation">Formation</Link>
-          <Link href="/support">Support</Link>
-          <Separator className="w-1/2 bg-stone-900 pb-px" />
-          <p>ajouter call to action</p>
-        </div>
-      </motion.div>
     </div>
   )
 }

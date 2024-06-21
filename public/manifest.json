@@ -1,6 +1,8 @@
 {
   "name": "Crypto Pro App",
   "short_name": "Crypto Pro",
+  "orientation": "portrait-primary",
+  
   "icons": [
     {
       "src": "icons/manifest-icon-192.maskable.png",
