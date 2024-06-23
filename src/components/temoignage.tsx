@@ -17,7 +17,7 @@ const Temoignage = () => {
       <CarouselNext />
       <CarouselPrevious />
       <div className="relative ">
-        <CarouselMainContainer className="h-60">
+        <CarouselMainContainer className="h-[500px]">
           {Array.from({ length: videoIds.length  }).map((_, index) => (
             <SliderMainItem key={index} className="bg-transparent">
               <div className="size-full flex items-center justify-center">
@@ -26,8 +26,8 @@ const Temoignage = () => {
             </SliderMainItem>
           ))}
         </CarouselMainContainer>
-        <div className="absolute left-1/2 -translate-x-1/2">
-          <CarouselThumbsContainer className="gap-x-1 ">
+        <div className="absolute left-1/2 -translate-x-1/2 mt-1">
+          <CarouselThumbsContainer className="gap-x-1">
             {Array.from({ length: videoIds.length }).map((_, index) => (
               <CarouselIndicator key={index} index={index} />
             ))}

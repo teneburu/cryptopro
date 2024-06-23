@@ -5,7 +5,7 @@ const author = 'tenebr.es'
 
 export default function Head() {
   return (
-    <>
+    <header>
       {/* Recommended Meta Tags */}
       <meta charSet='utf-8' />
       <meta name='language' content='french' />
@@ -71,7 +71,6 @@ export default function Head() {
       <meta name='viewport' content='width=device-width, minimum-scale=1, initial-scale=1.0, viewport-fit=cover' />
       <meta name='theme-color' content='#f7931a' />
       <link rel='shortcut icon' href='/icons/apple-touch-icon.png' />
-
-    </>
+    </header>
   )
 }
