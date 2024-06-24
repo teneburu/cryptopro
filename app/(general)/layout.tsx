@@ -25,7 +25,6 @@ export default function RootLayout({
         <div className="relative flex min-h-screen flex-col">
           <div className="flex items-center space-x-4 sm:justify-between sm:space-x-0">
             <MainNav isPWA={checkPWA()}/>
-            <AuthNav/>
           </div>
           <main className="flex-1">
             {children}

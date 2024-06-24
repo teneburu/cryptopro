@@ -1,9 +1,67 @@
 {
-  "id": "af8b8baa-93df-4021-90af-e4bff3ab2195",
-  "prevId": "3938071a-1433-4d85-8151-508d513816fe",
+  "id": "e5c6a971-fea8-4282-9fc0-26f5383f8c8a",
+  "prevId": "2c2c0e9d-9dfe-40fb-983b-bc5b41b786ea",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
+    "public.invite_codes": {
+      "name": "invite_codes",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tier": {
+          "name": "tier",
+          "type": "tier",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "max_uses": {
+          "name": "max_uses",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "times_used": {
+          "name": "times_used",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "uses_left": {
+          "name": "uses_left",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "invite_codes_code_unique": {
+          "name": "invite_codes_code_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code"
+          ]
+        }
+      }
+    },
     "public.users_table": {
       "name": "users_table",
       "schema": "",
@@ -37,6 +95,14 @@
           "type": "text",
           "primaryKey": false,
           "notNull": true
+        },
+        "tier": {
+          "name": "tier",
+          "type": "tier",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'free'"
         }
       },
       "indexes": {},
@@ -49,18 +115,25 @@
           "columns": [
             "email"
           ]
-        },
-        "users_table_invitecode_unique": {
-          "name": "users_table_invitecode_unique",
-          "nullsNotDistinct": false,
-          "columns": [
-            "invitecode"
-          ]
         }
       }
     }
   },
-  "enums": {},
+  "enums": {
+    "public.tier": {
+      "name": "tier",
+      "schema": "public",
+      "values": [
+        "free",
+        "bronze",
+        "silver",
+        "gold",
+        "premium",
+        "master",
+        "elite"
+      ]
+    }
+  },
   "schemas": {},
   "_meta": {
     "columns": {},

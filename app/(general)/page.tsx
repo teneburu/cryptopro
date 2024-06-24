@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { linkVariants } from "@/components/ui/link"
 import Link from "next/link"
-import  { AppGui1, AppVisu1, AppVisu2, RightArrow } from "@/components/icons"
+import  { AppGui1, AppVisu1, AppVisu2, RightArrow, BtcMeet } from "@/components/icons"
 import VideoComponent from "@/components/video-component"
 import {
   Card,
@@ -26,31 +26,26 @@ export default function Page() {
           <Image src="/gradient/tel-orange-bgg3.png" alt="Orange Gradient Background Bottom" fill className="pointer-events-none -z-10" priority sizes="(max-width: 700px) 100vw" style={{objectFit: "contain", objectPosition: "bottom"}}/>
       </div>
       <div className="sm:h-[calc(60vh)] md:h-[calc(70vh)] xl:h-[calc(80vh)]">
-        <section className="container p-4 py-8 md:p-16 xl:p-24">
-          <h1 className="xl:text-5xl lg:text-4xl text-3xl font-bold text-[#1E1E1E] ">Investir les meilleures cryptomonnaies.</h1>
-            <p className="my-8 lg:text-lg sm:text-sm font-medium text-pretty">
-              On vous accompagne dans vos investissements en cryptomonnaie, et on vous enseigne comment maximiser vos profits. 
-              <span className="hidden sm:inline">Profitez de notre expertise pour fructifier votre capital et tirer parti des prochains bull runs.</span>
-            </p>
-          <Link href="/onboarding" className={`${linkVariants({variant: "outline"})} sm:${linkVariants({variant: "outline", size: "sm"})}`}>Programmer un appel <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
-          <Link href="/" className={`${linkVariants({variant: "nooutline"})} sm:${linkVariants({variant: "nooutline", size: "sm"})}`}>Assister à un live <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
-        </section>
-      </div>
-      <div>
-        <section className="container p-4 md:p-16 xl:p-24">
-          <div className="sm:h-[calc(50vh)] md:h-[calc(60vh)] xl:h-[calc(70vh)] pt-12">
-            <VideoComponent video_id="aZO9A4TWmds" className="rounded-3xl shadow-lg "/>
-            <h1 className="xl:text-3xl lg:text-2xl text-xl font-bold pt-8 ml-3 text-[#1E1E1E]">Démystifier le monde complexe des cryptomonnaies.</h1>
-            <div className="flex-col mb-16 relative w-full items-center">
-              <p className="mt-4 mb-2 ml-3 lg:text-lg sm:text-sm font-medium tracking-tight">Nous fournissons à nos membres les outils nécessaires pour prendre des décisions éclairées, en rendant l&apos;investissement plus facile et efficace. </p>
-              <Link href="/academie" className={`${linkVariants({variant: "nooutline"})} sm:${linkVariants({variant: "nooutline", size: "sm"})}`}>En savoir plus <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+        <section className="container p-4 py-8 md:p-16">
+          <div className="grid md:grid-cols-2 grid- grid-cols-1 md:grid-cols-[60%_40%] gap-4">
+            <div className="">
+              <h1 className="xl:text-5xl lg:text-4xl text-3xl font-bold text-[#1E1E1E]  max-w-[80vw]">Bienvenue chez Crypto Pro.</h1>
+                <p className="my-8 lg:text-lg sm:text-sm font-medium text-pretty">
+                  Notre mission est de démystifier le monde complexe des cryptomonnaies et de fournir à nos membres les outils nécessaires pour prendre des décisions d'investissement éclairées. 
+                  <span className="hidden sm:inline"> Initialement réservé à l'élite n'ouvre ses portes que sur sélection.</span>
+                </p>
+              <Link href="/onboarding" className={`${linkVariants({variant: "outline"})} sm:${linkVariants({variant: "outline", size: "sm"})}`}>Programmer un appel <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+              <Link href="/" className={`${linkVariants({variant: "nooutline"})} sm:${linkVariants({variant: "nooutline", size: "sm"})}`}>Rejoindre la liste d'attente <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+            </div>
+            <div>
+              
             </div>
           </div>
         </section>
       </div>
       <div className="relative h-min-content">
         <section className="container p-8 md:p-16 xl:p-24">
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold text-[#1E1E1E]">Bénéficiez de nos conseils d&apos;experts en investissement</h1>
               <p className="my-8 text-lg font-medium tracking-tight">Nos équipes analysent en continu le marché de la cryptomonnaie pour vous sélectionner les monnaies les plus prometteuses et vous indiquer les meilleurs points d'entrée et de sortie.</p>
@@ -75,8 +70,8 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <Image src="/app-cp-free.jpg" alt="App Visuel" className="rounded-2xl shadow-lg w-full object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" fill/>
+            <div className="relative m-16">
+              <Image src="/binance-illustration.jpg" alt="App Visuel" className="rounded-2xl shadow-lg w-full object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" fill/>
             </div>
           </div>
         </section>

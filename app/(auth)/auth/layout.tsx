@@ -1,7 +1,7 @@
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import "@/globals.css";
 import Head from "@/head";
-
+import { Layout } from "@/components/r3f/Layout";
 export default function AuthLayout({
   children,
 }: Readonly<{ 
@@ -13,7 +13,7 @@ export default function AuthLayout({
         <Head />
         <div className="relative flex min-h-screen flex-col">
           <main className="flex-1">
-            {children}
+            <Layout>{children}</Layout>
           </main>
           <TailwindIndicator />
         </div>

@@ -84,12 +84,12 @@ export default function Auth() {
   }
 
   return (
-    <div className='flex min-h-screen items-center justify-center'>
+    <div className='flex flex-col relative min-h-screen items-center justify-center'>
       <Image src="/gradient/pc-rose-bgg3.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
+      <VertLogo className='size-40 text-night fill-current mb-8'/>
       <section className='p-8 border-2 border-muted/50 rounded-md shadow-md bg-stone-100/30 backdrop-blur-md'>
-        <VertLogo className='size-40 text-night fill-current mx-auto' />
-        <Tabs defaultValue="login" className="w-[400px]" onValueChange={(value) => setTab(value)}>
-          <TabsList className='w-full my-8'>
+        <Tabs defaultValue="login" className="w-[90vw] lg:w-[50vw]" onValueChange={(value) => setTab(value)}>
+          <TabsList className='w-full my-4'>
             <div className='p-1 rounded-md bg-muted/50'>
               <TabsTrigger className='rounded-l-md' value="login">Login</TabsTrigger>
               <TabsTrigger className='rounded-r-md' value="signup">Sign Up</TabsTrigger>

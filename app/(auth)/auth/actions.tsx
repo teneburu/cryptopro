@@ -22,7 +22,7 @@ export async function login(formData: FormData) {
   }
 
   revalidatePath('/', 'layout')
-  return { success: true, path: '/onboarding' }
+  return { success: true, path: '/auth/onboarding' }
 }
 
 export async function signup(formData: FormData) {
@@ -42,7 +42,7 @@ export async function signup(formData: FormData) {
   }
 
   revalidatePath('/', 'layout')
-  return { success: true, path: '/onboarding' }
+  return { success: true, path: '/auth/onboarding' }
 }
 
 export async function SignOut() {

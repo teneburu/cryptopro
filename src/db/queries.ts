@@ -34,13 +34,3 @@ export async function getUserByInviteCode(invitecode: SelectUser['invitecode']):
 export async function deleteUser(id: SelectUser['id']) {
   await db.delete(usersTable).where(eq(usersTable.id, id));
 }
-
-export function generateInviteCode(length: number = 10): string {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-}
