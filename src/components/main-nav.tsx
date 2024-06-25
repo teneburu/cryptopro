@@ -10,7 +10,7 @@ export function MainNav({ isPWA }: MainNavProps) {
   return (
     <div className="w-full relative ">
       {/* desktop navbar */}
-      <div className="px-0 py-0 lg:px-16 lg:py-12">
+      <div className="z-10">
         <PcNav />
       </div>
       {/* mobile navbar */}

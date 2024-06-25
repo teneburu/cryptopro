@@ -11,12 +11,20 @@ const withPWA = require('@ducanh2912/next-pwa').default({
   disable: process.env.NODE_ENV === 'development',
 })
 
+/** @type {import('next').NextConfig} */
+const { withNextVideo } = require('next-video/process');
+
 const nextConfig = {
-  webpack(config, { isServer }) {
+  webpack(config, { dev, isServer }) {
     if (!isServer) {
       // We're in the browser build, so we can safely exclude the sharp module
       config.externals.push('sharp')
     }
+
+    if (dev && !isServer) {
+      config.devtool = 'source-map';
+    }
+
     // audio support
     config.module.rules.push({
       test: /\.(ogg|mp3|wav|mpe?g)$/i,
@@ -51,7 +59,7 @@ const nextConfig = {
 const KEYS_TO_OMIT = ['webpackDevMiddleware', 'configOrigin', 'target', 'analyticsId', 'webpack5', 'amp', 'assetPrefix']
 
 module.exports = (_phase, { defaultConfig }) => {
-  const plugins = [[withPWA], [withBundleAnalyzer, {}]]
+  const plugins = [[withPWA], [withBundleAnalyzer, {}], [withNextVideo, {}]]
 
   const wConfig = plugins.reduce((acc, [plugin, config]) => plugin({ ...acc, ...config }), {
     ...defaultConfig,
@@ -67,4 +75,3 @@ module.exports = (_phase, { defaultConfig }) => {
 
   return finalConfig
 }
-

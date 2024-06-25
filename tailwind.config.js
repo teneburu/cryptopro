@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  plugins: [require('tailwindcss-animated')],
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -90,6 +91,5 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
-  },
-  plugins: [require("tailwindcss-animate")],
+  }
 }
