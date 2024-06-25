@@ -15,7 +15,7 @@ export const linkVariants = cva(
         nooutline:
           "group font-semibold text-stone-900 hover:text-stone-600",
         secondary:
-          "bg-night/80 font-semibold text-white text hover:bg-stone-800/90",
+          "bg-night font-semibold text-white text hover:bg-stone-800/90",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "underline-offset-4 hover:underline text-primary",
       },

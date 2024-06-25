@@ -3,5 +3,9 @@ interface  Props {
     className?: string
 }
 export default function VideoComponent({video_id, className}: Props) {
-    return <iframe className={`w-full aspect-video ${className}`} src={`https://www.youtube.com/embed/${video_id}?autoplay=0&origin=https://crypto-pro.app`} allowFullScreen />
+    return <iframe width="1080" height="1920" 
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+    className={`w-full aspect-video ${className}`} 
+    src={`https://player.vimeo.com/video/${video_id}`} 
+    allowFullScreen />
   }

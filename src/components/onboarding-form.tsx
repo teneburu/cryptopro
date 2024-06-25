@@ -7,6 +7,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@
 import { Input } from "@/components/ui/input"
 import { useState } from "react";
 import { motion } from 'framer-motion'
+import Link from "next/link";
+import { linkVariants } from "./ui/link";
+import { RightArrow } from "./icons";
 
 const steps = [
   { id: 'Étape 1', name: 'Informations personnelles', fields: ['prenom', 'dob' ]},
@@ -188,6 +191,8 @@ export default function OnboardingForm() {
                     </FormItem>
                   )}
                 />
+                <p className='my-4 text-sm leading-6 text-slate-900'>Vous n'avez pas de code d'invitation ?</p>
+                <Link href="https://app.iclosed.io/e/lmn-consulting-llp/calendrier-sabri" className={`${linkVariants({variant: "secondary"})} sm:${linkVariants({variant: "secondary", size: "sm"})}`}>Programmez en appel<RightArrow className="w-4 ml-3 text-stone-200 group-hover:text-stone-800 fill-current"/></Link>
               </motion.div>
             )}
             {currentStep === 2 && (
@@ -196,7 +201,8 @@ export default function OnboardingForm() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}>
                 <p className='mt-4 text-sm leading-6 text-gray-600'>Vérification terminée.</p>
-                <p className='mt-4 text-sm leading-6 text-gray-600'>Votre niveau d'invitation est: {tier}</p>
+                <p className='my-4 text-sm leading-6 text-gray-600'>Vous êtes inscrit à notre liste d'attente. <br/> Vous serez contacté par un conseiller.</p>
+                <Link href="https://traders-pro-community.circle.so/join?invitation_token=d8cedad1d30b34edbc408e5c6deed17d5da5634f-55d14c3b-71c6-4e2b-94e7-69c5ea208b13 " className={`${linkVariants({variant: "secondary"})} sm:${linkVariants({variant: "secondary", size: "sm"})}`}>Rejoignez le pré-groupe !<RightArrow className="w-4 ml-3 text-stone-100 group-hover:text-stone-600 fill-current"/></Link>
               </motion.div>
             )}
           </form>
