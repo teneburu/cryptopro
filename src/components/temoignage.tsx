@@ -41,7 +41,7 @@ const TemoignageContent = () => {
           {videoData.map((video, index) => (
             <SliderMainItem key={index} className="bg-transparent">
               <div className="flex items-center justify-center">
-                <VideoComponent video_id={video.id} height='600px' />
+                <VideoComponent video_id={video.id} height='460px' />
               </div>
             </SliderMainItem>
           ))}

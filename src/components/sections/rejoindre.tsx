@@ -4,8 +4,8 @@ import { linkVariants } from "@/components/ui/link"
 import { RightArrow } from "@/components/icons"
 const Rejoindre = () => {
     return (
-        <section className="container p-8 md:p-16 xl:p-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <section className="container md:p-16 xl:p-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-16">
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold text-[#1E1E1E]">Comment nous rejoindre ?</h1>
               <p className="my-8 text-lg font-medium tracking-tight"></p>
@@ -34,12 +34,12 @@ const Rejoindre = () => {
                 </div>
               </div>
             </div>
-            <div className="relative m-16">
+            <div className="hidden md:block relative m-16">
               <Image src="/binance-illustration.jpg" alt="App Visuel" className="rounded-2xl shadow-lg w-full object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" fill/>
             </div>
           </div>
-          <div className="flex-col my-16 relative w-full items-center">
-            <h1 className="xl:text-3xl lg:text-2xl text-xl font-bold pt- ml-3 text-[#1E1E1E]">Saisissez cette occasion.</h1>
+          <div className="flex-col relative w-full my-16 items-center">
+            <h1 className="xl:text-3xl lg:text-2xl text-xl font-bold ml-3 text-[#1E1E1E]">Saisissez cette occasion.</h1>
             <p className="mt-4 mb-2 ml-3 lg:text-lg sm:text-sm font-medium tracking-tight">Une fois inscrit, vous recevrez une invitation à rejoindre notre pré-groupe.</p>
             <Link href="/auth" className={`${linkVariants({variant: "nooutline"})} sm:${linkVariants({variant: "nooutline", size: "sm"})}`}>S'inscrire <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
           </div>

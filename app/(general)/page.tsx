@@ -58,7 +58,7 @@ export default function Page() {
           <Image src="/bg-chart-gradient-pc.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
         </div>
         <div className="-z-10 block md:hidden">
-          <Image src="/bg-chart-gradient2.png" alt="Orange Gradient Background Top" width={500} height={1900} className="absolute pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw"/>
+          <Image src="/bg-chart-gradient2.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw"/>
         </div>
         <Observer>
           <Animate animation="animate-fade-down animate-delay-200 animate-duration-[2200ms] animate-ease-in-out">
@@ -66,7 +66,7 @@ export default function Page() {
           </Animate>
         </Observer>
       </div>
-      <div className='relative p-12'>
+      <div className='relative py-6 md:py-12'>
         <Image src="/gradient-blue-rose.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
         <div>
           <Cards />
@@ -80,13 +80,13 @@ export default function Page() {
           <Image src="/temps-argent.png" alt="Orange Gradient Background Top" width={700} height={1000} className="rounded-lg shadow-lg pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
         </div>
       </div>
-        <div>
-          <Observer>
-            <Animate animation="animate-fade-up animate-delay-200 animate-duration-[2200ms] animate-ease-out">
-              <Rejoindre />
-            </Animate>
-          </Observer>
-        </div>
+      <div>
+        <Observer>
+          <Animate animation="animate-fade-up animate-delay-200 animate-duration-[2200ms] animate-ease-out">
+            <Rejoindre />
+          </Animate>
+        </Observer>
+      </div>
     </div>
   );
 }
