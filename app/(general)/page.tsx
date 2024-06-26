@@ -20,7 +20,7 @@ export default function Page() {
         <Landing />
         <Image src="/gradient/pc-orange-bgg.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
       </div>
-      <div className='bg-gradient-to-b from-[#fdd8bf]/10 via-[#fbc6ac]/40 to-[#fdd8bf]/10  border-y-3 border-[#fdd8bf]/10 '>
+      <div className='bg-gradient-to-b from-[#fdd8bf]/10 via-[#fbc6ac]/40 to-[#fbc6ac]/10  border-y-3 border-[#fdd8bf]/10 '>
         <VideoText />
       </div>
       <div className='relative'>
@@ -53,36 +53,22 @@ export default function Page() {
           </Observer>
         </div>
       </div>
-      <div className="relative border-y-4 border-[#fdd8bf]/90">      
-        <div className="-z-10 hidden md:block">
-          <Image src="/bg-chart-gradient-pc.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
-        </div>
-        <div className="-z-10 block md:hidden">
-          <Image src="/bg-chart-gradient2.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw"/>
-        </div>
-        <Observer>
-          <Animate animation="animate-fade-down animate-delay-200 animate-duration-[2200ms] animate-ease-in-out">
-            <Numlist />
-          </Animate>
-        </Observer>
-      </div>
       <div className='relative py-6 md:py-12'>
         <Image src="/gradient-blue-rose.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
-        <div>
-          <Cards />
-        </div>
         <div className='flex flex-col relative items-center'>
           <Observer>
-            <Animate animation="animate-fade-down animate-delay-200 animate-duration-[2200ms] animate-ease-out">
+            <Animate animation="animate-fade-down animate-delay-1000 animate-duration-[2200ms] animate-ease-out">
               <Temoignage />
             </Animate>
           </Observer>
-          <Image src="/temps-argent.png" alt="Orange Gradient Background Top" width={700} height={1000} className="rounded-lg shadow-lg pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
+        </div>
+        <div>
+          <Cards />
         </div>
       </div>
       <div>
         <Observer>
-          <Animate animation="animate-fade-up animate-delay-200 animate-duration-[2200ms] animate-ease-out">
+          <Animate animation="animate-fade-up animate-delay-1000 animate-duration-[2200ms] animate-ease-out">
             <Rejoindre />
           </Animate>
         </Observer>

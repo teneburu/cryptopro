@@ -17,10 +17,10 @@ import { useEffect, useState } from "react";
 
 const videoData = [
   { id: "2XO6JUTgEsBaVe1Yw2QXopDIibQJJmixx02kfORW41D00", quote: "« J'ai doublé mon capital de 200k € en 4 mois » - Swann" },
+  { id: "1AhOYMAidgv5oFWot007T022UXeRgofeffezM5AZod8mg", quote: "« Je suis passé de 3k € à 35k € en 6 mois » - Zak" },
   { id: "Zon5tLRF7EfYssH01T7nwyo41wncyiapaAq7URT11ZZA", quote: "« La formation est géniale, ils t'aident à savoir quand acheter ta crypto » - Sandra" },
   { id: "WwmCES2MxONgpIXpiIXNsR3WoAlEmcWChoh21nPPECg", quote: "« Je fais du profit à chaque fois » - Bryan" },
   { id: "omaN014l100Vxu86hmjoy2Qnvjqr9QyzG7zAfLW00XJ73E", quote: "« On se gave ces derniers mois » - Beno" },
-  { id: "1AhOYMAidgv5oFWot007T022UXeRgofeffezM5AZod8mg", quote: "« Je suis passé de 3k € à 35k € en 6 mois » - Zak" },
   { id: "62QD6tJ3HwYd3L02RS60200OgPpWsxkOnUhiVeJA8y1dqA", quote: "« J'ai fait un x11 en moins d'un an » - Adrian" },
 ];
 
@@ -67,7 +67,7 @@ const Temoignage = () => {
         <div className="flex flex-col mb-16 relative w-full items-center">
           <h1 className="xl:text-3xl lg:text-2xl text-xl font-bold pb-8 ml-3 text-[#1E1E1E]">Pourquoi pas vous?</h1>
           <p className="my-6 ml-3 lg:text-lg sm:text-sm font-medium text-center tracking-tight">
-            Seulement avec leur engagement, ils ont rempli leur objectifs. <br/> Comme eux, rejoignez-nous sur la route que nous pavons vers le succès.
+            Seulement avec leur engagement, <br/>ils ont rempli leur objectifs. <br/> Comme eux, rejoignez-nous sur la route <br/>que nous pavons vers le succès.
           </p>
           <Link href="/auth" className={`${linkVariants({ variant: "nooutline" })} sm:${linkVariants({ variant: "nooutline", size: "sm" })}`}>
             Faire comme eux <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current" />

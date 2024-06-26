@@ -29,7 +29,7 @@ const Rejoindre = () => {
                   <p className="my-3 ml-14">En tant que membre du pré-groupe, bénéficiez de mentorat personnalisé pour affiner vos stratégies d'investissement et accédez à des outils avancés et conseils d'experts.</p>
                 </div>
                 <div>
-                  <h2 className="text-lg font-semibold text-[#1E1E1E] ml-4">04. <span className="text-2xl font-bold pl-2">Intégration complète</span></h2>
+                  <h2 className="text-lg font-semibold text-[#1E1E1E] ml-4">05. <span className="text-2xl font-bold pl-2">Intégration complète</span></h2>
                   <p className="my-3 ml-14">Après évaluation dans le pré-groupe, vous pourrez intégrer notre cercle d'investisseurs privé, accédant ainsi à nos services exclusifs et stratégies avancées.</p>
                 </div>
               </div>

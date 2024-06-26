@@ -84,15 +84,15 @@ export default function Auth() {
   }
 
   return (
-    <div className='flex flex-col relative min-h-screen items-center justify-center'>
-      <Image src="/gradient/pc-rose-bgg3.png" alt="Orange Gradient Background Top" fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
-      <VertLogo className='size-40 text-night fill-current mb-8'/>
-      <section className='p-8 border-2 border-muted/50 rounded-md shadow-md bg-stone-100/30 backdrop-blur-md'>
-        <Tabs defaultValue="login" className="w-[90vw] lg:w-[50vw]" onValueChange={(value) => setTab(value)}>
+    <div className='flex flex-col relative w-full min-h-screen items-center justify-center'>
+      <Image src="/gradient-blue-rose.png" alt="Orange Gradient Background Top" fill className="object-cover pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
+      <VertLogo className='size-40 text-stone-900/90 fill-current mb-8'/>
+      <section className='border-2 border-muted/50 rounded-md shadow-md bg-stone-100/30 backdrop-blur-md'>
+        <Tabs defaultValue="signup" className="w-[90vw] lg:w-[50vw] p-2" onValueChange={(value) => setTab(value)}>
           <TabsList className='w-full my-4'>
             <div className='p-1 rounded-md bg-muted/50'>
-              <TabsTrigger className='rounded-l-md' value="login">Login</TabsTrigger>
-              <TabsTrigger className='rounded-r-md' value="signup">Sign Up</TabsTrigger>
+              <TabsTrigger className='rounded-l-md' value="login">Connexion</TabsTrigger>
+              <TabsTrigger className='rounded-r-md' value="signup">Inscription</TabsTrigger>
             </div>
           </TabsList>
           <TabsContent value="login">
@@ -116,7 +116,7 @@ export default function Auth() {
                   trigger={form.trigger}
                   label="Mot de passe"
                 />
-                <Button type="submit" variant='outline'>Login</Button>
+                <Button type="submit" variant='outline'>Se connecter</Button>
               </form>
             </Form>
           </TabsContent>
@@ -137,7 +137,7 @@ export default function Auth() {
                   name="password"
                   defaultValue=""
                   type="password"
-                  placeholder="Password"
+                  placeholder=""
                   trigger={form.trigger}
                   label="Mot de passe"
                 />
@@ -146,11 +146,11 @@ export default function Auth() {
                   name="confirmPassword"
                   defaultValue=""
                   type="password"
-                  placeholder="Confirm Password"
+                  placeholder=""
                   trigger={form.trigger}
                   label="Confirmer le mot de passe"
                 />
-                <Button type="submit">Sign Up</Button>
+                <Button type="submit" variant='outline'>S'inscrire</Button>
               </form>
             </Form>
           </TabsContent>
