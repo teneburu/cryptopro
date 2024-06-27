@@ -1,7 +1,6 @@
 import "@/globals.css";
 import Head from "@/head";
 import { Metadata } from "next";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { MainNav } from "@/components/main-nav";
 import AuthNav from "@/components/auth-nav";
 import { checkPWA } from '@/components/pwa-checker';
@@ -29,7 +28,6 @@ export default function RootLayout({
           <main className="flex-1">
             {children}
           </main>
-          <TailwindIndicator />
         </div>
       </body>
     </html>

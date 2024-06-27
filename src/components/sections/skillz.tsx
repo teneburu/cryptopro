@@ -5,7 +5,7 @@ const Skillz = () => {
         <section className="container p-4 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-[55%_45%] gap-8">
                 <div>
-                <Image src="/skillz-mockup.png" alt="App Visuel" className="pl-6 object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" width={600} height={600}/>
+                <Image src="/skillz-mockup.png" alt="Mockup Skillz" className="pl-6 object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" width={600} height={600}/>
                 </div>
                 <div className="p-3">
                 <h2 className="lg:text-2xl text-xl font-semibold">Skillz: Libérez votre apprentissage.</h2>

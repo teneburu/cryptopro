@@ -26,7 +26,7 @@ const Landing = () => {
               </p>
             </div>
             <div className="hidden lg:block ">
-              <Image src="/bitcoin_3d.png" alt="App Visuel" className="pl-6 object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" width={350} height={350}/>
+              <Image src="/bitcoin3d.png" alt="Bitcoin" className="pl-6 object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" width={350} height={350}/>
             </div>
           </div>
           <div className="grid grid-cols-2 mt-3">
