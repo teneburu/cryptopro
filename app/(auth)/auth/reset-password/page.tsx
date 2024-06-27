@@ -29,7 +29,7 @@ export default function ResetPasswordPage() {
   };
 
   return (
-    <div className="reset-password-page">
+    <div className="reset-password-page p-4">
       <h1>Réinitialisation du mot de passe</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -40,7 +40,7 @@ export default function ResetPasswordPage() {
             type="email"
             placeholder="Email"
             trigger={form.trigger}
-            label="Adresse email"
+            label="Adresse email :"
           />
           <div className='flex justify-between'>
             <Button type="submit" variant='outline'>Réinitialiser</Button>

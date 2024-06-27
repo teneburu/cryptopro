@@ -21,9 +21,6 @@ const nextConfig = {
       config.externals.push('sharp')
     }
 
-    if (dev && !isServer) {
-      config.devtool = 'source-map';
-    }
 
     // audio support
     config.module.rules.push({

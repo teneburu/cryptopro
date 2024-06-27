@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, ReactNode, useMemo } from 'react';
+import React, { ReactNode, useMemo } from 'react';
 
 interface AnimateProps {
   isVisible?: boolean;
@@ -9,10 +9,6 @@ interface AnimateProps {
 
 function Animate({ isVisible, animation, children }: AnimateProps) {
   const animationClass = useMemo(() => (isVisible ? animation : ''), [isVisible, animation]);
-
-  useEffect(() => {
-    console.log(`Visibility changed: ${isVisible}`);
-  }, [isVisible]);
 
   return (
     <div className={animationClass}>

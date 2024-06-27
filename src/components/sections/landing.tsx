@@ -31,11 +31,11 @@ const Landing = () => {
           </div>
           <div className="grid grid-cols-2 mt-3">
             <div className="justify-center hidden md:block">
-              <Link href="/auth/" className={`${linkVariants({variant: "outline"})}`}>Programmer un appel<RightArrow className="md:w-4 w-3 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+              <Link href="https://app.iclosed.io/e/lmn-consulting-llp/calendrier-sabri" className={`${linkVariants({variant: "outline"})}`}>Programmer un appel<RightArrow className="md:w-4 w-3 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
               <Link href="/auth/" className={`${linkVariants({variant: "nooutline"})}`}>J'ai un code d'invitation<RightArrow className="md:w-4 w-3 ml-2 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
             </div>
             <div className="justify-center col-span-2 space-x-2 block md:hidden">
-              <Link href="/auth/" className={`${linkVariants({variant: "black", size: "sm"})}`}>Programmer un appel<RightArrow className="md:w-4 w-3 ml-3 text-stone-100"/></Link>
+              <Link href="https://app.iclosed.io/e/lmn-consulting-llp/calendrier-sabri" className={`${linkVariants({variant: "black", size: "sm"})}`}>Programmer un appel<RightArrow className="md:w-4 w-3 ml-3 text-stone-100"/></Link>
               <Link href="/auth/" className={`${linkVariants({variant: "nooutline", size: "sm"})}`}>J'ai un code d'invitation<RightArrow className="md:w-4 w-3 ml-2 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
             </div>
           </div>

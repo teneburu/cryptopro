@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState, ReactNode, MutableRefObject } from 'react';
 
-// Hook to check visibility of a ref
 export function useIsVisible(ref: MutableRefObject<HTMLDivElement | null>) {
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -10,19 +9,14 @@ export function useIsVisible(ref: MutableRefObject<HTMLDivElement | null>) {
 
     const observer = new IntersectionObserver(([entry]) => {
       setIntersecting(entry.isIntersecting);
-      console.log('IntersectionObserver entry:', entry);
-      if (entry.isIntersecting) {
-        console.log('Element is in view:', entry.target);
-      }
+    
     });
-
+    
     observer.observe(ref.current);
-    console.log('Observer started observing:', ref.current);
 
     return () => {
       if (ref.current) {
         observer.unobserve(ref.current);
-        console.log('Observer stopped observing:', ref.current);
       }
     };
   }, [ref]);
