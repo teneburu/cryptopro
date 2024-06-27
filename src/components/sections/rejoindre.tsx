@@ -35,7 +35,7 @@ const Rejoindre = () => {
               </div>
             </div>
             <div className="hidden lg:block relative m-16">
-              <Image src="/binance-illustration.jpg" alt="App Visuel" className="rounded-2xl shadow-lg w-full object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" fill/>
+              <Image src="/binance-illustration.jpg" alt="Illustration binance" className="rounded-2xl shadow-lg w-full object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" fill/>
             </div>
           </div>
           <div className="flex-col relative w-full my-16 items-center">
