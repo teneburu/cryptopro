@@ -1,3 +1,4 @@
+'use client';
 import { useController } from "react-hook-form";
 import { useEffect } from 'react';
 import { FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";

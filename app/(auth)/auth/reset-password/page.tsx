@@ -1,29 +1,36 @@
-import React from 'react';
+'use client';
 import { useForm } from 'react-hook-form';
 import { forgotPassword } from '../actions';
 import ControlledInput from '@/components/controlled-input';
 import  { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
+import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useState } from 'react';
+
+const schema = z.object({
+  email: z.string({ message: "Veuillez renseigner votre adresse email." }).email()})
 
 export default function ResetPasswordPage() {
-  const form = useForm({
+   const [message, setMessage] = useState<string | null>(null);
+   
+  const form = useForm<z.infer<typeof schema>>({
+    resolver: zodResolver(schema),
     defaultValues: {
       email: '',
-    },
+    }
   });
 
   const onSubmit = async (data) => {
     const result = await forgotPassword(data);
     if (result.success) {
-      // handle success (e.g., show a message to check their email)
-    } else {
-      // handle error
+      setMessage(result.message);
     }
   };
 
   return (
     <div className="reset-password-page">
-      <h1>Reset Password</h1>
+      <h1>Réinitialisation du mot de passe</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <ControlledInput
@@ -35,7 +42,10 @@ export default function ResetPasswordPage() {
             trigger={form.trigger}
             label="Adresse email"
           />
-          <Button type="submit" variant='outline'>Send Reset Link</Button>
+          <div className='flex justify-between'>
+            <Button type="submit" variant='outline'>Réinitialiser</Button>
+            {message && <div className='text-blue-500 p-2 font-extrabold text-lg animate-pulse'>{message}</div>}
+          </div>
         </form>
       </Form>
     </div>
