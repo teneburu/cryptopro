@@ -63,11 +63,11 @@ const TemoignageContent = () => {
 
 const Temoignage = () => {
   return (
-    <section className="container p-4 py-8 md:p-16 xl:p-24">
+    <section className="container p-4 py-6 md:p-16 xl:p-24">
         <div className="flex flex-col mb-16 relative w-full items-center">
-          <h1 className="xl:text-3xl lg:text-2xl text-xl font-bold pb-8 ml-3 text-[#1E1E1E]">Pourquoi pas vous?</h1>
-          <p className="my-6 ml-3 lg:text-lg sm:text-sm font-medium text-center tracking-tight">
-            Seulement avec leur engagement, <br/>ils ont rempli leur objectifs. <br/> Comme eux, rejoignez-nous sur la route <br/>que nous pavons vers le succès.
+          <h1 className="md:text-3xl text-2xl font-bold  text-[#1E1E1E]">Pourquoi pas vous ?</h1>
+          <p className="my-6 text-sm font-normal tracking-tight md:text-lg md:font-semibold md:tracking-normal">
+            Ils ont réussi, en partant de zéro, grâce à nos stratégies.
           </p>
           <Link href="/auth" className={`${linkVariants({ variant: "nooutline" })} sm:${linkVariants({ variant: "nooutline", size: "sm" })}`}>
             Faire comme eux <RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current" />

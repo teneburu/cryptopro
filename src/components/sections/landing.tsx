@@ -1,23 +1,42 @@
 import Link from "next/link"
 import { linkVariants } from "../ui/link"
-import { RightArrow } from "../icons"
+import { Logotype, RightArrow } from "../icons"
 import Image from "next/image"
+import { Logo } from "@/components/icons";
 
 const Landing = () => {
     return (
-        <section className="container sm:h-[calc(30vh)] md:h-[calc(40vh)] xl:h-[calc(50vh)] p-4 md:p-16 mt-24 animate-fade-left animate-delay-200 animate-duration-[2200ms] animate-ease-out">
-          <div className="grid grid-cols-1 relative md:grid-cols-[60%_40%] gap-4">
-            <div className="pt-12 ml-6">
-              
-                <p className="my-8 lg:text-lg sm:text-sm font-medium text-pretty">
-                  Notre mission est de démystifier le monde complexe des cryptomonnaies et de fournir à nos membres les outils nécessaires pour prendre des décisions d'investissement éclairées. 
-                  <span className="hidden sm:inline"> Initialement réservé à l'élite n'ouvre ses portes que sur sélection.</span>
-                </p>
-              <Link href="/auth/" className={`${linkVariants({variant: "outline"})} sm:${linkVariants({variant: "outline", size: "sm"})}`}>Programmer un appel<RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
-              <Link href="/auth/" className={`${linkVariants({variant: "nooutline"})} sm:${linkVariants({variant: "nooutline", size: "sm"})}`}>J'ai un code d'invitation<RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+        <section className="container sm:min-h-[calc(30vh)] md:min-h-[calc(60vh)] p-4 md:p-16 md:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-[75%_25%] gap-4">
+            <div className="pt-8">
+              <div className="grid grid-cols-[60%_40%] md:grid-cols-1 ml-4 lg:ml-0 pb-4">
+                <div className="flex flex-col justify-center">
+                  <h1 className="xl:text-5xl lg:text-3xl text-2xl font-extrabold tracking-normal whitespace-nowrap md:tracking-wide text-[#1E1E1E] max-w-[80vw]">Bienvenue chez</h1>
+                  <Logotype className="w-[22vh] py-3 md:py-6 text-[#1E1E1E] fill-current" />
+                </div>
+                <div className="justify-end block md:hidden">
+                  <Logo className="w-16 ml-6 text-[#1E1E1E] fill-current"/>
+                </div>
+              </div>
+              <p className="my-2 text-md tracking-tight md:text-lg font-semibold md:tracking-normal text-pretty">
+                Initialement réservé à l'élite, nous avons décidé d'ouvrir nos portes à de nouveaux membres sur sélection.
+              </p>
+              <p className="mb-4 text-md tracking-tight md:text-lg font-semibold md:tracking-normal text-pretty">
+                Découvrez comment faire partie de notre communauté exclusive en postulant pour une invitation.
+              </p>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:block ">
               <Image src="/bitcoin_3d.png" alt="App Visuel" className="pl-6 object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" width={350} height={350}/>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 mt-3">
+            <div className="justify-center hidden md:block">
+              <Link href="/auth/" className={`${linkVariants({variant: "outline"})}`}>Programmer un appel<RightArrow className="md:w-4 w-3 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+              <Link href="/auth/" className={`${linkVariants({variant: "nooutline"})}`}>J'ai un code d'invitation<RightArrow className="md:w-4 w-3 ml-2 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+            </div>
+            <div className="justify-center col-span-2 space-x-2 block md:hidden">
+              <Link href="/auth/" className={`${linkVariants({variant: "black", size: "sm"})}`}>Programmer un appel<RightArrow className="md:w-4 w-3 ml-3 text-stone-100"/></Link>
+              <Link href="/auth/" className={`${linkVariants({variant: "nooutline", size: "sm"})}`}>J'ai un code d'invitation<RightArrow className="md:w-4 w-3 ml-2 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
             </div>
           </div>
         </section>

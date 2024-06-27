@@ -22,6 +22,9 @@ module.exports = {
       },
     },
     extend: {
+      dropShadow: {
+        'white': '4px 4px 6px rgba(255, 255, 255, 0.5)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

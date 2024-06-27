@@ -100,7 +100,6 @@ export default function OnboardingForm() {
 
   return ( 
     <div>
-      <section className="w-[90vw] lg:w-[50vw] p-4 border-2 border-muted/50 rounded-md shadow-md bg-stone-100/30 backdrop-blur-md">
       {/* steps */}
         <nav aria-label='Progress'>
           <ol role='list' className='space-y-4 md:flex md:space-x-8 md:space-y-0 pt-4'>
@@ -108,17 +107,17 @@ export default function OnboardingForm() {
               <li key={step.name} className='md:flex-1'>
                 {currentStep > index ? (
                   <div className='group flex w-full flex-col border-l-4 border-RO-700 py-2 pl-4 transition-colors md:border-l-0 md:border-t-4 md:pb-0 md:pl-0 md:pt-4'>
-                    <span className='text-sm font-medium text-amber-700 transition-colors '>
+                    <span className='text-sm font-medium text-slate-700 transition-colors '>
                       {step.id}
                     </span>
                     <span className='text-sm font-medium'>{step.name}</span>
                   </div>
                 ) : currentStep === index ? (
                   <div
-                    className='flex w-full flex-col border-l-4 border-amber-700 py-2 pl-4 md:border-l-0 md:border-t-4 md:pb-0 md:pl-0 md:pt-4'
+                    className='flex w-full flex-col border-l-4 border-slate-700 py-2 pl-4 md:border-l-0 md:border-t-4 md:pb-0 md:pl-0 md:pt-4'
                     aria-current='step'
                   >
-                    <span className='text-sm font-medium text-amber-700'>
+                    <span className='text-sm font-medium text-slate-700'>
                       {step.id}
                     </span>
                     <span className='text-sm font-medium'>{step.name}</span>
@@ -214,7 +213,7 @@ export default function OnboardingForm() {
               type='button'
               onClick={prev}
               disabled={currentStep === 0}
-              className='rounded bg-white px-2 py-1 text-sm font-semibold text-amber-900 shadow-sm ring-1 ring-inset ring-amber-300 hover:bg-sky-50 disabled:cursor-not-allowed disabled:opacity-50'
+              className='rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-sky-50 disabled:cursor-not-allowed disabled:opacity-50'
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -240,7 +239,7 @@ export default function OnboardingForm() {
               type='button'
               onClick={next}
               disabled={currentStep === steps.length - 1}
-              className='rounded bg-white px-2 py-1 text-sm font-semibold text-amber-900 shadow-sm ring-1 ring-inset ring-amber-300 hover:bg-sky-50 disabled:cursor-not-allowed disabled:opacity-50'
+              className='rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-sky-50 disabled:cursor-not-allowed disabled:opacity-50'
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -259,7 +258,6 @@ export default function OnboardingForm() {
             </button>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
   );
 }
