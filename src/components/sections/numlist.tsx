@@ -24,7 +24,7 @@ const Numlist = () => {
                   <h2 className="text-lg font-semibold tracking-tight md:tracking-normal text-[#1E1E1E] ml-4">
                     03. <span className="md:text-2xl text-xl font-bold pl-2">Suivez nos listes crypto</span> <span role="img" className="ml-2" aria-label="crypto">📑</span>
                   </h2>
-                  <p className="my-3 text-sm font-normal tracking-tight md:text-lg md:font-semibold md:tracking-normal ml-14">Recevez en temps réel les meilleures cryptos du marché à un moment donné, vous n'avez plus qu'à copier-coller nos signaux.</p>
+                  <p className="my-3 text-sm font-normal tracking-tight md:text-lg md:font-semibold md:tracking-normal ml-14">Recevez en temps réel les meilleures cryptos du marché à un moment donné, vous n&apos;avez plus qu&apos;à copier-coller nos signaux.</p>
                 </div>
               </div>
               <div className="border-l-2 border-stone-200/60">

@@ -43,7 +43,7 @@ export function Observer({ children }: { children: ReactNode }) {
           <div key={index} ref={ref}>
             {React.cloneElement(child as React.ReactElement, {
               isVisible,
-              children: (child as React.ReactElement).props.children // Explicitly pass children
+              children: (child as React.ReactElement).props.children 
             })}
           </div>
         );

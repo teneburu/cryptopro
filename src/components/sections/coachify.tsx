@@ -10,7 +10,7 @@ const Coachify = () => {
                 <div className="p-3">
                 <h2 className="lg:text-2xl text-xl font-semibold">Coachify: Un écosystème dédié à votre réussite.</h2>
                     <p className="my-4 text-sm font-normal tracking-tight md:text-lg md:font-semibold md:tracking-normal text-pretty ">
-                    Un suivi personnalisé qui vous guide à travers les subtilités du marché des cryptomonnaies, offrant des stratégies d'investissement sur mesure et un mentorat dédié pour maximiser vos résultats.. 
+                    Un suivi personnalisé qui vous guide à travers les subtilités du marché des cryptomonnaies, offrant des stratégies d&apos;investissement sur mesure et un mentorat dédié pour maximiser vos résultats.
                     </p>
                 </div>
             </div>

@@ -21,7 +21,6 @@ const nextConfig = {
       config.externals.push('sharp')
     }
 
-
     // audio support
     config.module.rules.push({
       test: /\.(ogg|mp3|wav|mpe?g)$/i,
@@ -51,6 +50,10 @@ const nextConfig = {
     return config
   },
   transpilePackages: ['three'],
+  images: {
+    loader: 'custom',
+    loaderFile: './imageLoader.js',
+  },
 }
 
 const KEYS_TO_OMIT = ['webpackDevMiddleware', 'configOrigin', 'target', 'analyticsId', 'webpack5', 'amp', 'assetPrefix']

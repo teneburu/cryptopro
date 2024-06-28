@@ -10,7 +10,7 @@ const Listes = () => {
                 <div className="p-3">
                 <h2 className="lg:text-2xl text-xl font-semibold">Coin Elite: Recevez en temps réel les listes des meilleures cryptos.</h2>
                     <p className="my-4 text-sm font-normal tracking-tight md:text-lg md:font-semibold md:tracking-normal">
-                    Notre service phare fournissant des recommandations d'achat et de vente en temps réel, basées sur des analyses professionnelles rigoureuses, vous aidant à investir de manière stratégique et rentable.
+                    Notre service phare fournissant des recommandations d&apos;achat et de vente en temps réel, basées sur des analyses professionnelles rigoureuses, vous aidant à investir de manière stratégique et rentable.
                     </p>
                 </div>
             </div>
