@@ -5,7 +5,7 @@ const Coachify = () => {
         <section className="container p-4 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-[55%_45%] gap-8">
                 <div>
-                <Image src="/prime-mockup.png" alt="Mockup Prime" className="pl-6 object-cover pointer-events-none" sizes="(max-width: 768px) 100vw" width={600} height={600}/>
+                <Image src="/prime-mockup.png" alt="Mockup Prime" className="pl-6 object-cover pointer-events-none" width={600} height={600}/>
                 </div>
                 <div className="p-3">
                 <h2 className="lg:text-2xl text-xl font-semibold">Coachify: Un écosystème dédié à votre réussite.</h2>

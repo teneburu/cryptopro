@@ -18,7 +18,7 @@ export default function Page() {
     <div className="relative overflow-visible w-full h-full">
       <div className='relative'>
         <Landing />
-        <Image src="/gradient/pc-orange-bgg.png" alt='Orange background gradient' fill className="pointer-events-none -z-10" priority sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
+        <Image src="/gradient/pc-orange-bgg.png" alt='Orange background gradient' fill className="pointer-events-none -z-10" priority/>
       </div>
       <div className='bg-gradient-to-b from-[#fdd8bf]/10 via-[#fbc6ac]/40 to-[#FFF5F4]/10  border-y-3 border-[#fdd8bf]/10 '>
         <VideoText />
@@ -32,7 +32,7 @@ export default function Page() {
           </Observer>
         </div>
         <div className='relative'>
-          <Image src="/gradient/bg-chart-linen.png" alt='Chart background linen' fill className="object-cover pointer-events-none -z-10" priority quality={100} sizes="(max-width: 768px) 100vw"/>
+          <Image src="/gradient/bg-chart-linen.png" alt='Chart background linen' fill className="object-cover pointer-events-none -z-10" priority quality={100}/>
           <Observer>
             <Animate animation="animate-fade-right animate-delay-500 animate-duration-[2200ms] animate-ease-in-out">
               <Coachify />
@@ -49,10 +49,10 @@ export default function Page() {
       </div>
       <div className="relative border-y-4 pt-4 border-[#fdd8bf]/90">
         <div className="-z-10 hidden md:block">
-          <Image src="/gradient/bg-chart-gradient-pc.png" alt='Chart background orange' fill className="pointer-events-none opacity-80 -z-10" sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
+          <Image src="/gradient/bg-chart-gradient-pc.png" alt='Chart background orange' fill className="pointer-events-none opacity-80 -z-10"/>
         </div>
         <div className="-z-10 block md:hidden">
-          <Image src="/gradient/bg-chart-gradient2.png" alt='Chart mobile background orange' fill className="absolute pointer-events-none opacity-80 -z-10" sizes="(max-width: 768px) 100vw"/>
+          <Image src="/gradient/bg-chart-gradient2.png" alt='Chart mobile background orange' fill className="absolute pointer-events-none opacity-80 -z-10" />
         </div>
         <Observer>
           <Animate animation="animate-fade-down animate-delay-200 animate-duration-[2200ms] animate-ease-in-out">
@@ -61,7 +61,7 @@ export default function Page() {
         </Observer>
       </div>
       <div className='relative py-6 md:py-12'>
-        <Image src="/gradient/gradient-blue-rose.png" alt='Blue rose gradient background' fill className="pointer-events-none -z-10" sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
+        <Image src="/gradient/gradient-blue-rose.png" alt='Blue rose gradient background' fill className="pointer-events-none -z-10"/>
         <div className='flex flex-col relative items-center'>
           <Observer>
             <Animate animation="animate-fade-down animate-delay-1000 animate-duration-[2200ms] animate-ease-out">
@@ -74,7 +74,7 @@ export default function Page() {
         <Cards />
       </div>
       <div className='relative'>
-        <Image src="/gradient/gradient-rainbow.png" alt='Rainbow background gradient' fill className="pointer-events-none -z-10" sizes="(max-width: 768px) 100vw, (max-width: 1000px) 100vw, (max-width: 2560px) 100vw"/>
+        <Image src="/gradient/gradient-rainbow.png" alt='Rainbow background gradient' fill className="pointer-events-none -z-10"/>
         <div className='flex flex-col relative items-center'></div>
         <Observer>
           <Animate animation="animate-fade-up animate-delay-1000 animate-duration-[2200ms] animate-ease-out">
