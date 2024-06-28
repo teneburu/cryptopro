@@ -26,7 +26,7 @@ const Cards = () => {
                 </div>
                 <div className="absolute bottom-0 right-0 size-36 lg:size-44 aspect-square">
                   <Image
-                    src="/bitcoin3d.png"
+                    src="2f611c7a-4ea3-4073-3a39-8a7933284e00"
                     alt="Bitcoin"
                     fill
                     className="translate-x-8 translate-y-20 lg:translate-x-16 md:translate-y-0 pointer-events-none"
@@ -47,7 +47,7 @@ const Cards = () => {
                 </div>
                 <div className="absolute bottom-0 right-0 size-36 lg:size-44 aspect-square">
                   <Image
-                    src="/laptop.png"
+                    src="ad03166a-8ea1-4904-3dbf-09db2eb0a200"
                     alt="Laptop"
                     fill
                     className="translate-x-8 translate-y-10 lg:translate-x-16 lg:translate-y-6 pointer-events-none"
@@ -68,7 +68,7 @@ const Cards = () => {
                 </div>
                 <div className="absolute bottom-2 right-0 size-36 lg:size-44 aspect-square">
                   <Image
-                    src="/document.png"
+                    src="99b9fb66-bdff-4b58-e195-470125ddc300"
                     alt="Document"
                     fill
                     className="translate-x-8 translate-y-14 lg:translate-x-16 lg:translate-y-4 pointer-events-none"
@@ -83,7 +83,7 @@ const Cards = () => {
               </CardTitle>
               <div className="size-36 relative aspect-square float-end">
               <Image
-                src="/appel.png"
+                src="205e2316-1e4c-4639-bd7d-0c5f719b7e00"
                 alt="Memojiappel"
                 fill
                 className="absolute drop-shadow-white bottom-0 pointer-events-none"

@@ -36,7 +36,7 @@ const Numlist = () => {
             </div>
           </div>
           <div className="relative hidden lg:block m-16">
-            <Image src="/app-cp-free.jpg" alt="App Visuel" className="rounded-2xl shadow-lg w-full object-cover pointer-events-none" fill/>
+            <Image src="0773610a-a72c-43a9-05fa-093770e22900" alt="App Visuel" className="rounded-2xl shadow-lg w-full object-cover pointer-events-none" fill/>
           </div>
         </div>
       </section>
