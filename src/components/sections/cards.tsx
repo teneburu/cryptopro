@@ -93,7 +93,7 @@ const Cards = () => {
                 Nous mettons en valeur les relations humaines, pour ne pas vous laisser seul face au marché.<span className="hidden sm:inline"> C&apos;est pourquoi nous ne donnons accès à notre service qu'après un appel avec un conseiller.</span>             
               </CardDescription>
             <div className="justify-center hidden md:block">
-              <Link href="/auth/" className={`${linkVariants({variant: "white"})}`}>Programmer un appel<RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
+              <Link href="https://app.iclosed.io/e/lmn-consulting-llp/calendrier-sabri" className={`${linkVariants({variant: "white"})}`}>Programmer un appel<RightArrow className="w-4 ml-3 text-stone-900 group-hover:text-stone-600 fill-current"/></Link>
             </div>
             <div className="justify-center col-span-2 block md:hidden">
               <Link href="/auth/" className={`${linkVariants({variant: "white", size: "sm"})}`}>Programmer un appel<RightArrow className="w-3 ml-2 text-stone-900"/></Link>
